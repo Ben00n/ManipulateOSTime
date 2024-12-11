@@ -2,11 +2,9 @@
 
 This tool bypasses cheat engine DLL speed hack detection methods by intercepting and manipulating the system clock. It allows for configurable time acceleration while ensuring synchronization upon termination.
 
----
-
 ## Example Detection Code
 
-Below is an example of a detection mechanism for speed hacks, often implemented in games or applications to identify tampering with time.
+Below is an example of a detection mechanism for speed hacks, example of what this bypasses. it is often implemented in games or applications to identify tampering with time.
 
 ```gdscript
 # Check for speed hacks and slowdowns
@@ -28,11 +26,6 @@ func check_speed_hack() -> void:
         os_time_start = os_time_now
         game_time_start = game_time_now
 ```
-# Time Manipulation Tool
-
-This tool bypasses cheat engine DLL speed hack detection methods by intercepting and manipulating the system clock. It allows for configurable time acceleration while ensuring synchronization upon termination.
-
----
 
 ## Features
 
@@ -41,15 +34,11 @@ This tool bypasses cheat engine DLL speed hack detection methods by intercepting
 - **Real-Time Synchronization**: Ensures system time remains accurate after manipulation.
 - **Configurable Update Intervals**: Control the frequency of time updates for performance optimization.
 
----
-
 ## How It Works
 
 1. **System Time Manipulation**: The tool modifies the system clock by calculating a fake time based on the elapsed real time multiplied by a configurable speed multiplier.
 2. **Real-Time Updates**: The system time is periodically updated to simulate accelerated or slowed time.
 3. **Synchronization on Exit**: On termination, the tool synchronizes the system clock with real-world time to avoid desynchronization issues.
-
----
 
 ## Configuration
 
@@ -57,5 +46,3 @@ You can configure the tool by modifying parameters in `TimeController.h`:
 
 - `SPEED_MULTIPLIER`: Multiplier for time acceleration (default: `15.0`).
 - `TIME_UPDATE_INTERVAL`: Interval in milliseconds for updating the system clock (default: `100ms`).
-
----
