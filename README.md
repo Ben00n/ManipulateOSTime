@@ -7,6 +7,13 @@ This tool bypasses cheat engine DLL speed hack detection methods by intercepting
 Below is an example of a detection mechanism for speed hacks, example of what this bypasses. it is often implemented in games or applications to identify tampering with time.
 
 ```gdscript
+# Time interval to check for speed hack (in seconds)
+@export var check_interval: float = 5.0
+
+# Maximum allowed speed discrepancy (e.g., 1.2 means 20% faster than real time is allowed)
+@export var max_speed_discrepancy: float = 1.2
+@export var min_speed_discrepancy: float = 0.8
+
 # Check for speed hacks and slowdowns
 func check_speed_hack() -> void:
     var os_time_now: int = Time.get_unix_time_from_system()
